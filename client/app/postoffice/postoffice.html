@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="pull-left">
+            <h1 class="page-header">postoffice</h1>
+        </div>
+        <div class="pull-right">
+            <button type="button" name="new-case" ng-click="newCase();">New postoffice</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <ul class="nav nav-tabs nav-stacked col-md-8 col-md-offset-2" ng-repeat="postoffice in postoffice">
+      <li><a href="#" tooltip="{{postoffice.info}}">{{postoffice.name}}</a></li>
+    </ul>
+  </div>
+</div>

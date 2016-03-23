@@ -6,8 +6,11 @@ angular.module('fullstackApp')
       'title': 'Home',
       'link': '/'
   },{
-      'title' : 'Cases',
-      'link': '/cases'
+      'title' : 'postoffice',
+      'link': '/postoffice'
+  }, {
+      'title' : 'Documents',
+      'link' : '/documents'
   }];
 
     $scope.isCollapsed = true;
