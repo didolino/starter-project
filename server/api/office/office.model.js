@@ -3,10 +3,10 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var PostOfficeSchema = new Schema({
+var OfficeSchema = new Schema({
   name: String,
   info: String,
   active: Boolean
 });
 
-module.exports = mongoose.model('PostOffice', PostOfficeSchema);
+module.exports = mongoose.model('Office', OfficeSchema);

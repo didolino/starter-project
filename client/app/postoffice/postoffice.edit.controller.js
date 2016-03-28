@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('postofficeEditCtrl', function ($scope , CasesResource) {
+  .controller('postofficeEditCtrl', function ($scope , postofficeResource) {
     $scope.message = 'Hello';
 
     $scope.save = function(){

@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: PostOfficeCtrl', function () {
+describe('Controller: postofficeCtrl', function () {
 
   // load the controller's module
   beforeEach(module('fullstackApp'));
 
-  var PostOfficeCtrl, scope;
+  var postofficeCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    PostOfficeCtrl = $controller('PostOfficeCtrl', {
+    postofficeCtrl = $controller('postofficeCtrl', {
       $scope: scope
     });
   }));

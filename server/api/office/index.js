@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express');
-var controller = require('./PostOffice.controller');
+var controller = require('./office.controller');
 
 var router = express.Router();
 

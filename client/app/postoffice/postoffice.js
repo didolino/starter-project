@@ -16,7 +16,7 @@ angular.module('fullstackApp')
       .state('postoffice.new', {
         url: '/new',
         controller: 'postofficeEditCtrl',
-        templateUrl: 'app/postoffice/casesEdit.html'
+        templateUrl: 'app/postoffice/postoffice.Edit.html'
     });
 
   });

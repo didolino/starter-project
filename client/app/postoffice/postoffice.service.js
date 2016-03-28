@@ -2,7 +2,7 @@
 
 angular.module('fullstackApp')
 .factory('postofficeResource', function ($resource) {
-    return $resource('/api/postoffice/:id/', {
+    return $resource('/api/offices/:id/', {
         id: '@id'
     },{
         update: {
