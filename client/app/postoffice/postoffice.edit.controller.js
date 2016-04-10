@@ -1,13 +1,30 @@
 'use strict';
 
 angular.module('fullstackApp')
-  .controller('postofficeEditCtrl', function ($scope , postofficeResource) {
+  .controller('postofficeEditCtrl', function ($scope, $stateParams , postofficeResource) {
     $scope.message = 'Hello';
 
-    $scope.save = function(){
-        postofficeResource.save($scope.postoffice).$promise.then(function(response){
-            console.log(response);
+    
+    if($stateParams.id){
+        postofficeResource.get({ id: $stateParams.id}).$promise.then(function(response){
             $scope.postoffice = response;
         });
+    }
+
+    $scope.save = function(){
+
+        if(!$stateParams.id){
+          console.log('save');
+        postofficeResource.save($scope.postoffice).$promise.then(function(response){
+            $scope.postoffice = response;
+            $state.go('postoffice.edit', {id : $scope.postoffice._id });
+        });
+      }else{
+        console.log('edit');
+        postofficeResource.update($scope.postoffice).$promise.then(function(response){
+            $scope.postoffice = response;
+        });
+      }
+
     };
   });

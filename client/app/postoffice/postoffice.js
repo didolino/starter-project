@@ -13,6 +13,11 @@ angular.module('fullstackApp')
         controller: 'postofficeCtrl',
         templateUrl: 'app/postoffice/postoffice.html'
       })
+      .state('postoffice.edit', {
+        url: '/edit/:id',
+        controller: 'postofficeEditCtrl',
+        templateUrl: 'app/postoffice/postoffice.Edit.html'
+      })
       .state('postoffice.new', {
         url: '/new',
         controller: 'postofficeEditCtrl',

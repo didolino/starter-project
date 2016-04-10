@@ -11,4 +11,9 @@ angular.module('fullstackApp')
     $scope.newpostoffice = function(){
         $state.go('postoffice.new');
     };
+
+    $scope.edit = function(officeId){
+      $state.go('postoffice.edit' , {id: officeId});
+    }
+
   });
